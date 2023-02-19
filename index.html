@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/css/styles.css">
+    <title>Consultando CEP</title>
+</head>
+
+<body>
+    <main>
+        <div id="container-search-cep">
+            <h1 id="titulo">Buscar um CEP</h1>
+            <div>
+                <input name="searchCep" type="text" id="searchCep" maxlength="9" autocomplete="off">
+                <input type="button" value="Buscar" id="btnBuscar">
+            </div>
+        </div>
+        <div id="container-inputs">
+            <form action="" method="get">
+                <label>Cidade:</label><input name="cidade" type="text" id="cidade" maxlength="40" autocomplete="off" readonly>
+                <label>Rua:</label><input name="rua" type="text" id="rua" maxlength="40" autocomplete="off" readonly>
+                <label>Complemento:</label><input name="complemento" type="text" id="complemento" maxlength="40" autocomplete="off" readonly>
+                <label>Bairro:</label><input name="bairro" type="text" id="bairro" maxlength="40" autocomplete="off" readonly>
+                <label>Estado:</label><input name="estado" type="text" id="estado" maxlength="2" autocomplete="off" >
+                <label>IBGE:</label><input name="ibge" type="text" id="ibge" maxlength="8" autocomplete="off" readonly>
+            </form>
+        </div>
+    </main>
+    <script src="./src/js/script_buscar_cep.js">
+
+    </script>
+</body>
+
+</html>

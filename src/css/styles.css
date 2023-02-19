@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Roboto:wght@400;500;700&display=swap');
+
+body {
+    font-family:'Roboto', sans-serif;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #060606;
+    color: #fefaf1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main {
+    background-color: #24272c;
+    padding: 2rem;
+    min-width: 330px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+#container-search-cep{
+    font-family: 'Allura', cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 2rem;
+}
+#search-cep #titulo {
+    font-size: 3rem;
+}
+#searchCep{
+    padding: 8px;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+#searchCep:focus{
+    border: 1px solid #68fe9a;
+}
+#btnBuscar{
+    background-color: #68fe9a;
+    border: none;
+    padding: 8px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #060606;
+    font-weight: 400;
+}
+#container-inputs form {
+    font-size: .8rem;
+    display: flex;
+    flex-direction: column;
+}
+#container-inputs form input{
+    padding: 5px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: #abacad;
+}
