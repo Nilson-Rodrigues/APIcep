@@ -3,27 +3,35 @@ const inputCep = document.querySelector('#searchCep');
 
 
 function getAdress() {
-    const cep = inputCep.value.replace("-","");
+    const cep = inputCep.value.replace("-", "");
     const url = `https://viacep.com.br/ws/${cep}/json/`;
 
-    fetch(url).then(Response => Response.json())
+    fetch(url).then(response =>
+        response.json())
         .then(data => {
-            const dados = data;
-            const
-                cidade = document.querySelector('#cidade'),
-                rua = document.querySelector('#rua'),
-                complemento = document.querySelector('#complemento'),
-                bairro = document.querySelector('#bairro'),
-                estado = document.querySelector('#estado'),
-                ibge = document.querySelector('#ibge');
+            if (!data.erro) {
+                const dados = data;
+                const
+                    cidade = document.querySelector('#cidade'),
+                    rua = document.querySelector('#rua'),
+                    complemento = document.querySelector('#complemento'),
+                    bairro = document.querySelector('#bairro'),
+                    estado = document.querySelector('#estado'),
+                    ibge = document.querySelector('#ibge');
 
 
-            cidade.value = dados.localidade;
-            rua.value = dados.logradouro;
-            complemento.value = dados.complemento;
-            bairro.value = dados.bairro;
-            estado.value = dados.uf;
-            ibge.value = dados.ibge;
+                cidade.value = dados.localidade;
+                rua.value = dados.logradouro;
+                complemento.value = dados.complemento;
+                bairro.value = dados.bairro;
+                estado.value = dados.uf;
+                ibge.value = dados.ibge;
+            } else {
+
+                inputCep.value = '';
+                alert("Cep não encontrado");
+
+            }
         }).catch(error => {
             console.log(error);
             inputCep.value = '';
